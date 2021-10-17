@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="d-flex align-items-center justify-content-center" style="margin-left: 20%; margin-right: 20%;">
+        <table class="table">
+            <thead class="align-items-center bg-warning text-dark text-center">
+                <th class="col-2">First Name</th>
+                <th class="col-2">Last Name</th>
+                <th class="col-2">Full Name</th>
+            </thead>
+            <tbody>
+                {% for user in users: %}
+                <tr class="border-top border-dark text-center">
+                    <td>{{user['first_name']}}</td>
+                    <td>{{user['last_name']}}</td>
+                    <td>{{user['first_name']}} {{user['last_name']}}</td>
+                </tr>    
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
